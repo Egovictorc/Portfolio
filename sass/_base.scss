@@ -1,0 +1,97 @@
+// RESPONSIVE BREAKPOINTS
+$bp-xlarge: 75em;   // 1200px
+$bp-large: 62.5em;   // 1000px
+$bp-medium: 50em;    // 800px;
+$bp-small: 37.5em;    // 600px;
+$bp-xsmall: 25em;     // 400px
+
+$color-primary: ;
+$color-primary-light: ;
+$color-primary-dark: ;
+
+$color-test: orangered;
+
+:root {
+    //////COLOR
+    --color-primary: ;
+    --color-primary-light: ;
+    --color-primary-dark: ;
+
+    --color-white: #fff;
+    --color-black: #000;
+
+    --color-overlay-b: rgba(0,0,0, .9);
+    --color-overlay-w: rgba(255, 255, 255, .9);
+
+    --color-grey: #777;
+    --color-grey-light: #777;
+    --color-grey-dark: #777;
+
+    //////////FONT
+    --font-large: 3.6rem;
+    --font-large: 3.2rem;
+    --font-medium: 2.8rem;
+    --font-standard: 1.6rem;
+
+    --font-primary: 'Nunito', sans-serif;
+    --font-secondary: 'Nunito', sans-serif;
+
+    ///////////// PADDING
+    --padding-link: 1.6rem 3.2rem;
+
+    //////// SHADOW
+    --shadow-box: 0 .1rem .5rem #555;
+    --shadow-text: 0 .1rem .3rem #333;
+}
+
+::selection {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+}
+
+@font-face {
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Nunito Regular'), local('Nunito-Regular'),
+       url('../fonts/nunito-v9-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../fonts/nunito-v9-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+@font-face {
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Nunito Regular'), local('Nunito-Regular'),
+       url('../fonts/nunito-v9-latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../fonts/nunito-v9-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+body {
+    font: {
+        family: var(--font-primary);
+        weight: 400;
+    }
+    line-height: 1.6;
+    background-color: var(--color-white);
+    color: var(--color-black);
+}
+
+.container {
+
+    display: grid;
+    grid-template-columns: [full-start] minmax(3vw, 1fr)[center-start] repeat(4, [col-start] minmax(5vw, 10vw) [col-end]) [center-end] minmax(3vw, 1fr) [full-end];
+}
